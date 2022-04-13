@@ -10,7 +10,7 @@ al siguiente handler de la cadena.
 Este patrón puede resultarnos útil en casos en los que un objeto emisor
 de una petición desconozca qué objeto(s) podrá(n) atender a la misma.
 
-![](chain-of-responsibility.png)
+![](assets/chain-of-responsibility.png)
 
 ##El problema
 
@@ -47,7 +47,7 @@ extenderán la misma clase abstracta. En ambos casos se proveerá de un
 método que permita obtener el _**sucesor**_ y así el paso de la petición 
 por la cadena será lo más flexible y transparente posible.
 
-![](chainProcess.png)
+![](assets/chainProcess.png)
 
 ##Una analogía en el Real World
 
@@ -60,10 +60,10 @@ a los componentes principales en las clases de GUI (interfaz gráfica
 de usuario).
 
 
-![](solution2-en.png)
+![](assets/solution2-en.png)
 
 - Otro caso de uso son los filtros de acceso secuencial.
-![](solution1-en.png)
+![](assets/solution1-en.png)
 ##Ventajas / Inconvenientes
 
 ####VENTAJAS:
@@ -87,10 +87,28 @@ sin ser atendidas).
 
 ##Ejercicio
 	😵‍💫
+
+Escenario: estamos realizando el software para un banco y uno de los puntos 
+más importantes es saber quién puede aprobar un crédito. 
+Por lo tanto el banco define las siguientes reglas de negocio:
+
+- Si el monto no supera los $ 10.000 entonces el ejecutivo de cuenta pueda 
+aprobar el préstamo.
+- Si el monto esta entre los $10.000 y $50.000 entonces la persona indicada
+para realizar la aprobación es el líder inmediato de dicho ejecutivo.
+- Si el monto se encuentra entre $ 50.000 y $100.000 entonces es el Gerente 
+quién debe realizar dicha aprobación.
+- Por montos superiores a los $100.000 entonces la aprobación la realizará 
+el Director.
+
+Para este caso se ha decidido realizar un patrón Chain of Responsibility. 
+Se decide crear una interface llamada IAprobador que debe implementar toda 
+clase que pertenezca a nuestra cadena de responsabilidades.
+
 ##UML
-![](chain-of-responsability.jpg)
-![](chainOfResponsability.png)
-![](Chain_of_responsibility.jpg)
+![](assets/chain-of-responsability.jpg)
+![](assets/chainOfResponsability.png)
+![](assets/Chain_of_responsibility.jpg)
 _Manejador_: Interfaz que define las operaciones necesarias para tratar 
 los mensajes y propagarlos si corresponde.
 
@@ -108,3 +126,5 @@ https://refactoring.guru/design-patterns/chain-of-responsibility
 https://informaticapc.com/patrones-de-diseno/chain-of-responsability.php
 
 https://programacion.net/articulo/patrones_de_diseno_xiv_patrones_de_comportamiento_chain_of_responsability_1017
+
+https://medium.com/@disenotec2016/chain-of-responsibility-cadena-de-responsabilidad-104ae0bf6dfa
