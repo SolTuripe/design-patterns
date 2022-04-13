@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class commandTestSergi {
+public class commandTest {
     @Autowired
     Command button;
 
