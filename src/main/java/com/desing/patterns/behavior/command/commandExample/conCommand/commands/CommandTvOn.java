@@ -11,7 +11,8 @@ public class CommandTvOn implements Command {
     }
 
     @Override
-    public void execute() {
-        tv.on();
+    public String execute() {
+       return tv.on();
+
     }
 }

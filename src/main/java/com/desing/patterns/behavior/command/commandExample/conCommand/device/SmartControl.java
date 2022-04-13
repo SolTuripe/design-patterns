@@ -9,8 +9,8 @@ public class SmartControl {
     private Command button3;
     private Command button4;
 
-    public void clickButton1() {
-        button1.execute();
+    public String clickButton1() {
+        return button1.execute();
     }
 
     public void clickButton2() {

@@ -11,7 +11,8 @@ public class CommandTvOff implements Command {
     }
 
     @Override
-    public void execute() {
+    public String execute() {
         tv.off();
+        return null;
     }
 }

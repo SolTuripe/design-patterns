@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class commandTest {
+public class commandTestSergi {
     @Autowired
     Command button;
 
@@ -18,9 +18,11 @@ public class commandTest {
         Tv tv = new Tv();
 
         SmartControl smartControl = new SmartControl();
-        var sut = smartControl.setButton1(new CommandTvOn(tv));
+        smartControl.setButton1(new CommandTvOn(tv));
 
-        assertEquals("Turn on tv", );
+        var sut=smartControl.clickButton1();
+
+        assertEquals("Turn on tv", sut);
 
     }
 }

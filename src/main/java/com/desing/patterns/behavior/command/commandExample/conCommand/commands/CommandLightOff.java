@@ -11,7 +11,8 @@ public class CommandLightOff implements Command {
     }
 
     @Override
-    public void execute() {
+    public String execute() {
         light.turnOff();
+        return null;
     }
 }
